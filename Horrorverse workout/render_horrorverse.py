@@ -209,7 +209,7 @@ CHEST_CALVES = [
 ]
 
 BACK_ABS = [
-    ["One-Arm DB Row", "4", "10–15", "Bench-supported; drive elbow toward hip, slight torso rotation for full lat contraction", "2–1–1–1", "75s"],
+    ["Low cable row", "4", "10–15", "Use Wide grip bar, keep elbows tucked and bring bar up at an angle, squeeze at top for 2 seconds", "2–2–1–1", "75s"],
     ["Lat Pulldown", "4", "10–15", "Elbows down/in", "2–1–1–1", "75s"],
     ["Reverse Grip Pulldown", "4", "10–15", "Underhand, squeeze low lats", "2–1–1–1", "75s"],
     ["Single Arm Cable Row", "4", "10–15", "Isolate side, slight twist", "2–1–1–1", "60s"],
@@ -218,16 +218,29 @@ BACK_ABS = [
     ["Lat Pull-In", "4", "12–15", "Elbow close to ribs", "3–1–1–1", "60s"],
     ["Rope Crunch", "4", "15–20", "Flex spine, exhale hard", "2–1–1–1", "45s"],
     ["Hanging Leg Raise", "4", "15–20", "No swing, posterior tilt", "2–1–1–0", "45s"],
+    [
+        Paragraph("<b><font color='red'>Rack Pull (No rest for the wicked)</font></b>", body_style),
+        "3", "6–10",
+        "Set pins just below knees; pull with lats and traps, not lower back; control lockout",
+        "2–0–1–1", "120s"
+    ],
 ]
 
 
 LEGS_TORTURE = [
-    ["Leg Extensions (Warm-up)", "4", "20", "Light, controlled; full squeeze, 2-sec hold at top", "2-2-1-1", "45s"],
+    ["Leg Extension Warm Up", "2", "20", "Light, controlled; full squeeze, 2-sec hold at top", "2-2-1-1", "45s"],
+    ["Barbell Back Squat", "5", "12-6", "Sit deep, drive through heels, core tight, no bounce", "3-1-1-1", "90s"],
     ["Leg Press (Feet Low & Shoulder-Width)", "4", "12-10", "Drive through heels, no lockout, deep range", "3-1-1-1", "75-90s"],
-    ["Hammer Strength V-Squat", "4", "12-8", "Go deep, upright torso, control eccentric", "3-1-1-1", "90s"],
+    ["Bulgarian Split Squat (DB)", "4", "10-12/leg", "Back foot elevated; chest tall, descend deep until glute stretch, explode up", "3-1-1-1", "90s"],
     ["Seated Leg Curl", "4", "12-10", "Full stretch, 2-sec squeeze at bottom", "2-2-1-1", "60s"],
     ["RDL (Dumbbell or Barbell)", "4", "10", "Hips back, slight knee bend, glute drive at top", "3-1-1-1", "75s"],
-    ["Leg Extensions (Finisher)", "4", "15-20", "Constant tension; last set drop to failure", "2-1-1-2", "45s"],
+    ["Leg Extensions", "4", "15-20", "Constant tension; last set drop to failure", "2-1-1-2", "60s"],
+    [
+        Paragraph("<b><font color='red'>Walking Lunges (No rest for the wicked)</font></b>", body_style),
+        "2", "10/leg",
+        "Controlled pace, stretch and balance",
+        "2-0-1-1", "60s"
+    ],
 ]
 
 SHOULDERS_TRAPS = [
@@ -238,7 +251,7 @@ SHOULDERS_TRAPS = [
     ["Reverse Cable Fly", "4", "12–15", "Keep constant tenstion", "3–1–1–2", "60s"],
     ["Face Pulls (Rope, Cable at Eye Height)", "4", "15-20", "Elbows High, rear-delt peak squeeze", "2–1–1–2", "60s"],
     ["Barbell Shrug", "4", "12-15", "2-second squeeze at peak, slow 3-second descent.", "2–2–1–2", "75s"],
-    ["Behind-the-Back Shrug", "4", "15", "No rolling shoulders, keep bar close; steady rhythm", "2–1–1–2", "60s"],
+    ["High Pulls", "4", "15", "Explode up (quick) → Squeeze at the top → Lower slow (2–3 seconds)", "1–2–2–1", "60s"],
 ]
 
 CHEST_BACK = [
@@ -285,7 +298,9 @@ RULES = [
     "The Pump Is the Offering — Each rep is a ritual; bleed for progress.",
     "Thy Tempo Is Thy Faith — Control is the creed of beasts.",
     "Macros Are Law — Track thy fuel; the body keeps no secrets.",
-    "Rest Only in the Coffin — Sleep is the recovery of the dead."
+    "Rest Only in the Coffin — Sleep is the recovery of the dead.",
+    "Hydration Is The Blood Of The Beast - Deny it, And The Monster Dies.",
+    "'No rest for the wicked' = Optional finisher workout.",
 ]
 
 MORNING_RITUALS = [
