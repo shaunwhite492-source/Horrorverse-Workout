@@ -314,46 +314,46 @@ RULES = [
 ]
 
 Finishers = {
-    "The Heart-Ripper Drop Set = Machine Chest Press Drop Set" = [
+    "The Heart-Ripper Drop Set - Machine Chest Press Drop Set": [
         "12 Reps Heavy",
         "Drop Weight 20-30%",
         "12 Reps",
         "Drop Again",
         "15-20 slow reps (full stretch, 2-sec squeeze)"
-    ];
-    "The Doom Lift = Rack Pulls"
-    "The Knee-Reaper Ladder = Leg Extensions (Quad Dominant)" = [
+    ],
+    "The Doom Lift - Rack Pulls": [],
+    "The Knee-Reaper Ladder - Leg Extensions (Quad Dominant)": [
         "Set Weight: something you can do 15 reps with",
         "Do 15 reps - hold the top squeeze for 10s",
         "Do 10 reps - hold the top for 10s",
         "Do 8 reps - hold 10s"
-    ];
-    "The Crimson Coil = Leg Curl Drop Set (Hamstring Dominant)" = [
+    ], # type: ignore
+    "The Crimson Coil - Leg Curl Drop Set (Hamstring Dominant)": [
         "Heavy: 10 reps slow",
         "Drop Weight 20%: 10 reps",
         "Drop another 20%: 10 reps with 2-second squeeze"
-    ];
-    "The Hangman's Halo" = [
+    ], # type: ignore
+    "The Hangman's Halo": [
         "Standing Y-raise - 12 reps",
         "Immediately bent-over rear delt cable raise - 12 reps",
         "Immediately lateral raise from the cable - 12 reps"
-    ];
-    "The Tormented Twin Peaks" = [
+    ], # type: ignore
+    "The Tormented Twin Peaks": [
         "Push-ups to failure",
-        "Immediately into Straight-arm Cable Pulldown - 15 reps"
+        "Immediately into Straight-arm Cable Pulldown - 15 reps",
         "2 rounds 45 seconds rest"
-    ];
-    "The Soul Siphon 21s" = [
-        "EZ bar curl - 7 bottom half reps, 7 top half reps, 7 full reps"
-        "Immediately Rope pushdown - 21 reps nonstop"
+    ], # type: ignore
+    "The Soul Siphon 21s": [
+        "EZ bar curl - 7 bottom half reps, 7 top half reps, 7 full reps",
+        "Immediately Rope pushdown - 21 reps nonstop",
         "1 round but if you can do 2 you're not human"
-    ];
-    "Every Other Day - The Torso Torture Rack" = [
+    ], # type: ignore
+    "Every Other Day - The Torso Torture Rack": [
         "Cable Crunch - Hanging Leg Raise Superset",
         "Cable Crunch - 15-20 reps",
-        "Hanging Leg Raise - AMRAP"
+        "Hanging Leg Raise - AMRAP",
         "Rest 45s, repeat 2-3 times"
-    ];
+    ], # type: ignore
 }
 
 
