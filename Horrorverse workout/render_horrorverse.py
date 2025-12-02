@@ -327,33 +327,33 @@ Finishers = {
         "Do 15 reps - hold the top squeeze for 10s",
         "Do 10 reps - hold the top for 10s",
         "Do 8 reps - hold 10s"
-    ], # type: ignore
+    ],
     "The Crimson Coil - Leg Curl Drop Set (Hamstring Dominant)": [
         "Heavy: 10 reps slow",
         "Drop Weight 20%: 10 reps",
         "Drop another 20%: 10 reps with 2-second squeeze"
-    ], # type: ignore
+    ], 
     "The Hangman's Halo": [
         "Standing Y-raise - 12 reps",
         "Immediately bent-over rear delt cable raise - 12 reps",
         "Immediately lateral raise from the cable - 12 reps"
-    ], # type: ignore
+    ],
     "The Tormented Twin Peaks": [
         "Push-ups to failure",
         "Immediately into Straight-arm Cable Pulldown - 15 reps",
         "2 rounds 45 seconds rest"
-    ], # type: ignore
+    ],
     "The Soul Siphon 21s": [
         "EZ bar curl - 7 bottom half reps, 7 top half reps, 7 full reps",
         "Immediately Rope pushdown - 21 reps nonstop",
         "1 round but if you can do 2 you're not human"
-    ], # type: ignore
+    ],
     "Every Other Day - The Torso Torture Rack": [
         "Cable Crunch - Hanging Leg Raise Superset",
         "Cable Crunch - 15-20 reps",
         "Hanging Leg Raise - AMRAP",
         "Rest 45s, repeat 2-3 times"
-    ], # type: ignore
+    ],
 }
 
 
@@ -479,6 +479,21 @@ def bullets_block(title, bullets):
     blk.append(Spacer(1, 6))
     return blk
 
+def finishers_block(title, finishers_dict):
+    blk = [Paragraph(title, h2_style)]
+    
+    for name, steps in finishers_dict.items():
+        # Finisher name as subheading
+        blk.append(Paragraph(f"<b>{name}</b>", h3_style))
+        
+        # Each step as a bullet point
+        for step in steps:
+            blk.append(Paragraph("• " + step, body_style))
+        
+        blk.append(Spacer(1, 6))  # space between finishers
+    
+    return blk
+
 def workout_block(title, one_liner, rows, colw=None):
     flow = []
     flow += chapter_divider(title, one_liner, icon="")
@@ -498,7 +513,10 @@ def run():
     # HOW TO + RULES + Finishers
     story += bullets_block("🧠 How to Use This Guide", HOW_TO)
     story += bullets_block("⚔️ Rules of the HorrorVerse", RULES)
-    story += bullets_block("Finishers for the Psychos", Finishers)
+    story.append(PageBreak())
+
+    #FINISHERS
+    story += finishers_block("🩸 Finishers For The Psychos", Finishers)
     story.append(PageBreak())
 
     # WORKOUT CHAPTERS (with one-liners)
