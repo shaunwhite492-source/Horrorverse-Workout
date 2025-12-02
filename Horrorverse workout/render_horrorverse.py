@@ -206,6 +206,12 @@ CHEST_CALVES = [
     ["Pec Dec", "4", "12–15", "2s peak squeeze", "2–1–1–2", "60s"],
     ["Leg Press Calf Raise", "4", "10–15", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
     ["Seated Calf Raise", "4", "15–20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
+    [
+        Paragraph("<b><font color='red'>The Heart-Ripper Drop Set</font></b>", body_style),
+        "3", "12 (Dropsets)",
+        "A final offering to the iron gods. Three drops. No breath. No hope.",
+        "3-1-1-1", "90s after all 3 drops"
+    ]
 ]
 
 BACK_ABS = [
@@ -216,12 +222,10 @@ BACK_ABS = [
     ["HS Single Arm High Row", "4", "8–12", "Upper lat stretch → squeeze", "2–0–1–2", "90s"],
     ["Straight Arm Pulldown", "4", "12–15", "Long stretch, brace ribs", "3–1–1–2", "60s"],
     ["Lat Pull-In", "4", "12–15", "Elbow close to ribs", "3–1–1–1", "60s"],
-    ["Rope Crunch", "4", "15–20", "Flex spine, exhale hard", "2–1–1–1", "45s"],
-    ["Hanging Leg Raise", "4", "15–20", "No swing, posterior tilt", "2–1–1–0", "45s"],
     [
-        Paragraph("<b><font color='red'>Rack Pull (No rest for the wicked)</font></b>", body_style),
+        Paragraph("<b><font color='red'>The Doom Lift</font></b>", body_style),
         "3", "6–10",
-        "Set pins just below knees; pull with lats and traps, not lower back; control lockout",
+        "Short, violent, and straight to the point.",
         "2–0–1–1", "120s"
     ],
 ]
@@ -236,11 +240,17 @@ LEGS_TORTURE = [
     ["RDL (Dumbbell or Barbell)", "4", "10", "Hips back, slight knee bend, glute drive at top", "3-1-1-1", "75s"],
     ["Leg Extensions", "4", "15-20", "Constant tension; last set drop to failure", "2-1-1-2", "60s"],
     [
-        Paragraph("<b><font color='red'>Walking Lunges (No rest for the wicked)</font></b>", body_style),
-        "2", "10/leg",
-        "Controlled pace, stretch and balance",
-        "2-0-1-1", "60s"
+        Paragraph("<b><font color='red'>The Knee-Reaper Ladder</font></b>", body_style),
+        "4", "Ladder",
+        "That top hold is where normal men break… but monsters keep going.",
+        "2-1-1-2", "60s"
     ],
+    [
+        Paragraph("<b><font color='red'>The Crimson Coil</font></b>", body_style),
+        "4", "Ladder",
+        "Slow, squeezing contractions that feel like your hamstrings are winding up like ancient chains.",
+        "3-1-1-2", "75s"
+    ]
 ]
 
 SHOULDERS_TRAPS = [
@@ -291,6 +301,7 @@ HOW_TO = [
     "Refeeds: every 6–8 weeks for 2–3 days (carb-focused) to refuel the beast.",
     "Tempo is (eccentric–pause–concentric–pause). Example 3–1–1–2.",
     "Progress only when all sets hit the top of the rep range cleanly.",
+    "AMRAP = As Many Reps As Possible"
 ]
 
 RULES = [
@@ -300,8 +311,51 @@ RULES = [
     "Macros Are Law — Track thy fuel; the body keeps no secrets.",
     "Rest Only in the Coffin — Sleep is the recovery of the dead.",
     "Hydration Is The Blood Of The Beast - Deny it, And The Monster Dies.",
-    "'No rest for the wicked' = Optional finisher workout.",
 ]
+
+Finishers = {
+    "The Heart-Ripper Drop Set = Machine Chest Press Drop Set" = [
+        "12 Reps Heavy",
+        "Drop Weight 20-30%",
+        "12 Reps",
+        "Drop Again",
+        "15-20 slow reps (full stretch, 2-sec squeeze)"
+    ];
+    "The Doom Lift = Rack Pulls"
+    "The Knee-Reaper Ladder = Leg Extensions (Quad Dominant)" = [
+        "Set Weight: something you can do 15 reps with",
+        "Do 15 reps - hold the top squeeze for 10s",
+        "Do 10 reps - hold the top for 10s",
+        "Do 8 reps - hold 10s"
+    ];
+    "The Crimson Coil = Leg Curl Drop Set (Hamstring Dominant)" = [
+        "Heavy: 10 reps slow",
+        "Drop Weight 20%: 10 reps",
+        "Drop another 20%: 10 reps with 2-second squeeze"
+    ];
+    "The Hangman's Halo" = [
+        "Standing Y-raise - 12 reps",
+        "Immediately bent-over rear delt cable raise - 12 reps",
+        "Immediately lateral raise from the cable - 12 reps"
+    ];
+    "The Tormented Twin Peaks" = [
+        "Push-ups to failure",
+        "Immediately into Straight-arm Cable Pulldown - 15 reps"
+        "2 rounds 45 seconds rest"
+    ];
+    "The Soul Siphon 21s" = [
+        "EZ bar curl - 7 bottom half reps, 7 top half reps, 7 full reps"
+        "Immediately Rope pushdown - 21 reps nonstop"
+        "1 round but if you can do 2 you're not human"
+    ];
+    "Every Other Day - The Torso Torture Rack" = [
+        "Cable Crunch - Hanging Leg Raise Superset",
+        "Cable Crunch - 15-20 reps",
+        "Hanging Leg Raise - AMRAP"
+        "Rest 45s, repeat 2-3 times"
+    ];
+}
+
 
 MORNING_RITUALS = [
     "Stomach Vacuums — 3–5 sets × 15–30 sec (fasted on waking).",
@@ -441,9 +495,10 @@ def run():
     # COVER
     story += cover_story()
 
-    # HOW TO + RULES
+    # HOW TO + RULES + Finishers
     story += bullets_block("🧠 How to Use This Guide", HOW_TO)
     story += bullets_block("⚔️ Rules of the HorrorVerse", RULES)
+    story += bullets_block("Finishers for the Psychos", Finishers)
     story.append(PageBreak())
 
     # WORKOUT CHAPTERS (with one-liners)
