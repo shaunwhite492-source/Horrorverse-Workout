@@ -197,7 +197,7 @@ def chapter_divider(title_text, one_liner, icon=""):
 # ---------- Content data (condensed from our plan) ----------
 # Each day: [ [Exercise, Sets, Reps, Form/Scheme, Tempo, Rest], ... ]
 CHEST_CALVES = [
-    ["Incline Bench (DB/BB)", "4", "8–12", "Slight arch, scapula set", "2–0–1–1", "90s"],
+    ["Incline Bench (DB/BB/Smith)", "4", "8–12", "Slight arch, scapula set", "2–0–1–1", "90s"],
     ["Bench Press (DB/BB/Machine)", "4", "8–12", "Elbows ~45°, full ROM", "2–0–1–1", "90s"],
     ["HS Incline Press", "4", "8–12", "Controlled eccentric, chest lead", "2–0–1–2", "90s"],
     ["DB Pull Over", "4", "8–12", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "90s"],
