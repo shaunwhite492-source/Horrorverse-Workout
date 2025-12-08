@@ -514,7 +514,7 @@ def workout_block(title, one_liner, rows, colw=None):
     flow = []
     flow += chapter_divider(title, one_liner, icon="")
     header = ["Exercise", "Sets", "Reps", "Form Scheme", "Tempo", "Rest"]
-    default_colw = [185, 55, 55, 150, 70, 45]
+    default_colw = [185, 55, 65, 150, 70, 45]
     flow.append(horror_table(header, rows, colw or default_colw))
     flow.append(Spacer(1, 10))
     return flow
