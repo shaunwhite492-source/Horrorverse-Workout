@@ -200,15 +200,15 @@ CHEST_CALVES = [
     ["Incline Bench (DB/BB)", "4", "8–12", "Slight arch, scapula set", "2–0–1–1", "90s"],
     ["Bench Press (DB/BB/Machine)", "4", "8–12", "Elbows ~45°, full ROM", "2–0–1–1", "90s"],
     ["HS Incline Press", "4", "8–12", "Controlled eccentric, chest lead", "2–0–1–2", "90s"],
-    ["HS Decline Press", "4", "8–12", "Lower pec line, shoulders pinned", "2–0–1–1", "90s"],
+    ["DB Pull Over", "4", "8–12", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "90s"],
     ["Incline Cable Fly", "4", "12–15", "Big stretch, soft elbows", "3–1–1–2", "60s"],
     ["Decline Cable Fly", "4", "12–15", "Stretch & squeeze", "3–1–1–2", "60s"],
     ["Pec Dec", "4", "12–15", "2s peak squeeze", "2–1–1–2", "60s"],
     ["Leg Press Calf Raise", "4", "10–15", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
-    ["Seated Calf Raise", "4", "15–20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
+    ["Standing Calf Raise", "4", "15–20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
     [
         Paragraph("<b><font color='red'>The Heart-Ripper Drop Set</font></b>", body_style),
-        "3", "12 (Dropsets)",
+        "1", "12 (Dropsets)",
         "A final offering to the iron gods. Three drops. No breath. No hope.",
         "3-1-1-1", "90s after all 3 drops"
     ]
@@ -219,7 +219,7 @@ BACK_ABS = [
     ["Lat Pulldown", "4", "10–15", "Elbows down/in", "2–1–1–1", "75s"],
     ["Reverse Grip Pulldown", "4", "10–15", "Underhand, squeeze low lats", "2–1–1–1", "75s"],
     ["Single Arm Cable Row", "4", "10–15", "Isolate side, slight twist", "2–1–1–1", "60s"],
-    ["HS Single Arm High Row", "4", "8–12", "Upper lat stretch → squeeze", "2–0–1–2", "90s"],
+    ["Dumbbell Chest-Supported High Row", "4", "12-15", "Upper lat stretch → squeeze", "2–1–1–2", "75s"],
     ["Straight Arm Pulldown", "4", "12–15", "Long stretch, brace ribs", "3–1–1–2", "60s"],
     ["Lat Pull-In", "4", "12–15", "Elbow close to ribs", "3–1–1–1", "60s"],
     [
@@ -235,19 +235,19 @@ LEGS_TORTURE = [
     ["Leg Extension Warm Up", "2", "20", "Light, controlled; full squeeze, 2-sec hold at top", "2-2-1-1", "45s"],
     ["Barbell Back Squat", "5", "12-6", "Sit deep, drive through heels, core tight, no bounce", "3-1-1-1", "90s"],
     ["Leg Press (Feet Low & Shoulder-Width)", "4", "12-10", "Drive through heels, no lockout, deep range", "3-1-1-1", "75-90s"],
-    ["Bulgarian Split Squat (DB)", "4", "10-12/leg", "Back foot elevated; chest tall, descend deep until glute stretch, explode up", "3-1-1-1", "90s"],
+    ["Hack Squat", "4", "10-12", "Knees forward, back glued to the pad, sink deep without hip roll, drive up through mid-foot, and never fully lock out.", "3-1-1-1", "90s"],
     ["Seated Leg Curl", "4", "12-10", "Full stretch, 2-sec squeeze at bottom", "2-2-1-1", "60s"],
     ["RDL (Dumbbell or Barbell)", "4", "10", "Hips back, slight knee bend, glute drive at top", "3-1-1-1", "75s"],
     ["Leg Extensions", "4", "15-20", "Constant tension; last set drop to failure", "2-1-1-2", "60s"],
     [
         Paragraph("<b><font color='red'>The Knee-Reaper Ladder</font></b>", body_style),
-        "4", "Ladder",
+        "2", "Ladder",
         "That top hold is where normal men break… but monsters keep going.",
         "2-1-1-2", "60s"
     ],
     [
         Paragraph("<b><font color='red'>The Crimson Coil</font></b>", body_style),
-        "4", "Ladder",
+        "2", "Ladder",
         "Slow, squeezing contractions that feel like your hamstrings are winding up like ancient chains.",
         "3-1-1-2", "75s"
     ]
@@ -262,6 +262,12 @@ SHOULDERS_TRAPS = [
     ["Face Pulls (Rope, Cable at Eye Height)", "4", "15-20", "Elbows High, rear-delt peak squeeze", "2–1–1–2", "60s"],
     ["Barbell Shrug", "4", "12-15", "2-second squeeze at peak, slow 3-second descent.", "2–2–1–2", "75s"],
     ["High Pulls", "4", "15", "Explode up (quick) → Squeeze at the top → Lower slow (2–3 seconds)", "1–2–2–1", "60s"],
+    [
+        Paragraph("<b><font color='red'>The Hangman's Halo</font></b>", body_style),
+        "2", "Sequence",
+        "Three angles, zero survivors. Your shoulders glow like a cursed halo when this one ends.",
+        "2-1-1-2", "60s"
+    ]
 ]
 
 CHEST_BACK = [
@@ -275,6 +281,12 @@ CHEST_BACK = [
     ["Single-Arm HS High Row", "4", "10–15", "Full stretch → squeeze", "2–1–1–2", "75s"],
     ["Leg Press Calf Raise", "4", "10–15", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
     ["Seated Calf Raise", "4", "15–20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
+    [
+        Paragraph("<b><font color='red'>The Tormented Twin Peaks</font></b>", body_style),
+        "2", "Superset",
+        "Chest collapses, back ignites — both halves of the upper body screaming in one ritual.",
+        "2-1-1-2", "60s"
+    ]
 ]
 
 ARMS_ABS = [
@@ -286,8 +298,12 @@ ARMS_ABS = [
     ["Single-Arm Cable Curl", "4", "12–15", "Slow eccentric, peak", "2–1–1–2", "60s"],
     ["Machine Curl", "4", "10–15", "Constant tension", "2–1–1–2", "60s"],
     ["Hammer Curl", "4", "10–12", "Neutral grip, control", "2–0–1–1", "75s"],
-    ["Rope Crunch", "4", "15–20", "Flex spine, exhale", "2–1–1–1", "45s"],
-    ["Hanging Leg Raise", "4", "15–20", "No swing, tilt", "2–1–1–0", "45s"],
+    [
+        Paragraph("<b><font color='red'>The Soul Siphon 21s</font></b>", body_style),
+        "1", "Sequence",
+        "One long ritual to drain every last ounce of strength from biceps and triceps.",
+        "2-1-1-2", "75s"
+    ]
 ]
 
 # Conditioning / Cardio / Morning Rituals
@@ -334,13 +350,13 @@ Finishers = {
         "Drop another 20%: 10 reps with 2-second squeeze"
     ], 
     "The Hangman's Halo": [
-        "Standing Y-raise - 12 reps",
-        "Immediately bent-over rear delt cable raise - 12 reps",
-        "Immediately lateral raise from the cable - 12 reps"
+        "Standing Y-raise - 12 reps, Tempo: 2-1-1-2",
+        "Immediately bent-over rear delt cable raise - 12 reps, Tempo: 3-1-1-1",
+        "Immediately lateral raise from the cable - 12 reps Tempo: 2-1-1-2"
     ],
     "The Tormented Twin Peaks": [
-        "Push-ups to failure",
-        "Immediately into Straight-arm Cable Pulldown - 15 reps",
+        "Push-ups to failure, Tempo: 2-1-1-0",
+        "Immediately into Straight-arm Cable Pulldown - 15 reps, Tempo: 3-1-1-1",
         "2 rounds 45 seconds rest"
     ],
     "The Soul Siphon 21s": [
