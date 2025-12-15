@@ -197,13 +197,13 @@ def chapter_divider(title_text, one_liner, icon=""):
 # ---------- Content data (condensed from our plan) ----------
 # Each day: [ [Exercise, Sets, Reps, Form/Scheme, Tempo, Rest], ... ]
 CHEST_CALVES = [
-    ["Incline Bench (DB/BB/Smith)", "4", "8–12", "Slight arch, scapula set", "2–0–1–1", "90s"],
-    ["Bench Press (DB/BB/Machine)", "4", "8–12", "Elbows ~45°, full ROM", "2–0–1–1", "90s"],
-    ["HS Incline Press", "4", "8–12", "Controlled eccentric, chest lead", "2–0–1–2", "90s"],
-    ["DB Pull Over", "4", "8–12", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "90s"],
-    ["Incline Cable Fly", "4", "12–15", "Big stretch, soft elbows", "3–1–1–2", "60s"],
-    ["Decline Cable Fly", "4", "12–15", "Stretch & squeeze", "3–1–1–2", "60s"],
-    ["Pec Dec", "4", "12–15", "2s peak squeeze", "2–1–1–2", "60s"],
+    ["Incline Bench (DB/BB/Smith)", "5", "15-8", "Slight arch, scapula set", "2–0–1–1", "90s"],
+    ["Bench Press (DB/BB/Machine)", "5", "15-8", "Elbows ~45°, full ROM", "2–0–1–1", "90s"],
+    ["HS Incline Press", "5", "15-8", "Controlled eccentric, chest lead", "2–0–1–2", "90s"],
+    ["DB Pull Over", "5", "15-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "90s"],
+    ["Incline Cable Fly", "6", "20-8", "Big stretch, soft elbows", "3–1–1–2", "60s"],
+    ["Decline Cable Fly", "6", "20-8", "Stretch & squeeze", "3–1–1–2", "60s"],
+    ["Pec Dec", "6", "20-8 + DropSet", "2s peak squeeze. Flex chest on rest", "2–1–1–2", "60s"],
     ["Leg Press Calf Raise", "4", "10–15", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
     ["Standing Calf Raise", "4", "15–20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
     [
@@ -318,6 +318,7 @@ HOW_TO = [
     "Tempo is (eccentric–pause–concentric–pause). Example 3–1–1–2.",
     "Progress only when all sets hit the top of the rep range cleanly.",
     "AMRAP = As Many Reps As Possible"
+    "Perform all of the reps and sets of the pyramid"
 ]
 
 RULES = [
