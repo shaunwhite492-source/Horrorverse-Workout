@@ -307,10 +307,10 @@ HOW_TO = [
     "Refeeds: every 6–8 weeks for 2–3 days (carb-focused) to refuel the beast.",
     "Tempo is (eccentric–pause–concentric–pause). Example 3–1–1–2.",
     "Progress only when all sets hit the top of the rep range cleanly.",
-    "AMRAP = As Many Reps As Possible"
-    "Perform all of the reps and sets of the pyramid"
-    "For sets of 5, pyramid goes: 15, 12, 10, 8, 8"
-    "For sets of 6, pyramid goes: 20, 16, 14, 12, 10, 8"
+    "AMRAP = As Many Reps As Possible",
+    "Perform all of the reps and sets of the pyramid",
+    "For sets of 5, pyramid goes: 15, 12, 10, 8, 8",
+    "For sets of 6, pyramid goes: 20, 16, 14, 12, 10, 8",
     "For every workout you can use cables, free weights, or machines"
 ]
 
