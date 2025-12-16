@@ -197,13 +197,13 @@ def chapter_divider(title_text, one_liner, icon=""):
 # ---------- Content data (condensed from our plan) ----------
 # Each day: [ [Exercise, Sets, Reps, Form/Scheme, Tempo, Rest], ... ]
 CHEST_CALVES = [
-    ["Incline Bench (DB/BB/Smith)", "5", "15-8", "Slight arch, scapula set", "2–0–1–1", "60s"],
+    ["Incline Bench (DB/BB/Smith)", "6", "20-8", "Slight arch, scapula set", "2–0–1–1", "60s"],
     ["Bench Press (DB/BB/Machine)", "5", "15-8", "Elbows ~45°, full ROM", "2–0–1–1", "60s"],
     ["HS Incline Press", "5", "15-8", "Controlled eccentric, chest lead", "2–0–1–2", "45s"],
     ["DB Pull Over", "5", "15-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
     ["Incline Cable Fly", "6", "20-8", "Big stretch, soft elbows", "3–1–1–2", "60s"],
     ["Decline Cable Fly", "6", "20-8", "Stretch & squeeze", "3–1–1–2", "60s"],
-    ["Pec Dec", "6", "20-8 + DropSet", "2s peak squeeze. Flex chest on rest", "2–1–1–2", "45s"],
+    ["Pec Dec", "5", "15-8 + DropSet", "2s peak squeeze. Flex chest on rest", "2–1–1–2", "45s"],
     ["Leg Press Calf Raise", "4", "10–15", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
     ["Standing Calf Raise", "4", "15–20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
     [
@@ -215,13 +215,13 @@ CHEST_CALVES = [
 ]
 
 BACK_ABS = [
-    ["Low cable row", "4", "10–15", "Use Wide grip bar, keep elbows tucked and bring bar up at an angle, squeeze at top for 2 seconds", "2–2–1–1", "75s"],
-    ["Lat Pulldown", "4", "10–15", "Elbows down/in", "2–1–1–1", "75s"],
-    ["Reverse Grip Pulldown", "4", "10–15", "Underhand, squeeze low lats", "2–1–1–1", "75s"],
-    ["Single Arm Cable Row", "4", "10–15", "Isolate side, slight twist", "2–1–1–1", "60s"],
-    ["Dumbbell Chest-Supported High Row", "4", "12-15", "Upper lat stretch → squeeze", "2–1–1–2", "75s"],
-    ["Straight Arm Pulldown", "4", "12–15", "Long stretch, brace ribs", "3–1–1–2", "60s"],
-    ["Lat Pull-In", "4", "12–15", "Elbow close to ribs", "3–1–1–1", "60s"],
+    ["Low cable row", "5", "15-8", "Use Wide grip bar, keep elbows tucked and bring bar up at an angle, squeeze at top for 2 seconds", "2–2–1–1", "75s"],
+    ["Lat Pulldown", "6", "20-8", "Elbows down/in", "2–1–1–1", "75s"],
+    ["Reverse Grip Pulldown", "5", "15-8", "Underhand, squeeze low lats", "2–1–1–1", "75s"],
+    ["Single Arm Cable Row", "5", "15-8", "Isolate side, slight twist", "2–1–1–1", "60s"],
+    ["Dumbbell Chest-Supported High Row", "6", "20-8", "Upper lat stretch → squeeze", "2–1–1–2", "75s"],
+    ["Straight Arm Pulldown", "6", "20-8", "Long stretch, brace ribs", "3–1–1–2", "60s"],
+    ["Lat Pull-In", "6", "20-8", "Elbow close to ribs", "3–1–1–1", "60s"],
     [
         Paragraph("<b><font color='red'>The Doom Lift</font></b>", body_style),
         "3", "6–10",
@@ -231,37 +231,30 @@ BACK_ABS = [
 ]
 
 
-LEGS_TORTURE = [
+QUADS = [
     ["Leg Extension Warm Up", "2", "20", "Light, controlled; full squeeze, 2-sec hold at top", "2-2-1-1", "45s"],
-    ["Barbell Back Squat", "5", "12-6", "Sit deep, drive through heels, core tight, no bounce", "3-1-1-1", "90s"],
-    ["Leg Press (Feet Low & Shoulder-Width)", "4", "12-10", "Drive through heels, no lockout, deep range", "3-1-1-1", "75-90s"],
-    ["Hack Squat", "4", "10-12", "Knees forward, back glued to the pad, sink deep without hip roll, drive up through mid-foot, and never fully lock out.", "3-1-1-1", "90s"],
-    ["Seated Leg Curl", "4", "12-10", "Full stretch, 2-sec squeeze at bottom", "2-2-1-1", "60s"],
-    ["RDL (Dumbbell or Barbell)", "4", "10", "Hips back, slight knee bend, glute drive at top", "3-1-1-1", "75s"],
-    ["Leg Extensions", "4", "15-20", "Constant tension; last set drop to failure", "2-1-1-2", "60s"],
+    ["Barbell Back Squat", "5", "15-8", "Sit deep, drive through heels, core tight, no bounce", "3-1-1-1", "90s"],
+    ["Leg Press (Feet Low & Shoulder-Width)", "5", "15-8", "Drive through heels, no lockout, deep range", "3-1-1-1", "75s"],
+    ["Hack Squat", "6", "20-8", "Knees forward, back glued to the pad, sink deep without hip roll, drive up through mid-foot, and never fully lock out.", "3-1-1-1", "60s"],
+    ["Smit Machine Squat", "5", "15-8", "Angled Smith Machine", "3-1-1-1", "45s"],
+    ["Leg Extensions", "6", "20-8", "Constant tension; last set drop to failure", "2-1-1-2", "60s"],
     [
         Paragraph("<b><font color='red'>The Knee-Reaper Ladder</font></b>", body_style),
         "2", "Ladder",
         "That top hold is where normal men break… but monsters keep going.",
         "2-1-1-2", "60s"
     ],
-    [
-        Paragraph("<b><font color='red'>The Crimson Coil</font></b>", body_style),
-        "2", "Ladder",
-        "Slow, squeezing contractions that feel like your hamstrings are winding up like ancient chains.",
-        "3-1-1-2", "75s"
-    ]
 ]
 
 SHOULDERS_TRAPS = [
-    ["BB Push Press", "4", "8–10", "Explosive power through lockout; control the drop", "2–0–1–0", "90s"],
+    ["BB Push Press", "6", "20-8", "Explosive power through lockout; control the drop", "2–0–1–0", "90s"],
     ["DB Lat Raise", "10", "12–15", "Go for blood-volume, slow negatives", "2–1–1–2", "45-60s"],
-    ["Cable Lat Raise", "4", "12-15", "lead with elbow, pause 1s at top, slow negative", "2-1-1-2", "60s"],
-    ["Reverse Pec Deck", "4", "12–15", "Rear-delt squeeze, control the eccentric", "2–1–1–2", "60s"],
-    ["Reverse Cable Fly", "4", "12–15", "Keep constant tenstion", "3–1–1–2", "60s"],
-    ["Face Pulls (Rope, Cable at Eye Height)", "4", "15-20", "Elbows High, rear-delt peak squeeze", "2–1–1–2", "60s"],
-    ["Barbell Shrug", "4", "12-15", "2-second squeeze at peak, slow 3-second descent.", "2–2–1–2", "75s"],
-    ["High Pulls", "4", "15", "Explode up (quick) → Squeeze at the top → Lower slow (2–3 seconds)", "1–2–2–1", "60s"],
+    ["Cable Lat Raise", "5", "15-8", "lead with elbow, pause 1s at top, slow negative", "2-1-1-2", "60s"],
+    ["Reverse Pec Deck", "6", "20-8", "Rear-delt squeeze, control the eccentric", "2–1–1–2", "60s"],
+    ["Reverse Cable Fly", "6", "20-8", "Keep constant tenstion", "3–1–1–2", "60s"],
+    ["Face Pulls", "5", "15-8", "Elbows High, rear-delt peak squeeze", "2–1–1–2", "60s"],
+    ["Barbell Shrug", "5", "15-8", "2-second squeeze at peak, slow 3-second descent.", "2–2–1–2", "75s"],
+    ["Behind Back Shrug", "5", "15-8", "Explode up (quick) → Squeeze at the top → Lower slow (2–3 seconds)", "1–2–2–1", "60s"],
     [
         Paragraph("<b><font color='red'>The Hangman's Halo</font></b>", body_style),
         "2", "Sequence",
@@ -270,34 +263,31 @@ SHOULDERS_TRAPS = [
     ]
 ]
 
-CHEST_BACK = [
-    ["HS Incline Press", "4", "8–12", "Upper chest, control negative", "2–0–1–1", "90s"],
-    ["Machine Chest Press", "4", "8–12", "Scaps set, mid-pec line", "2–0–1–1", "90s"],
-    ["HS Pullover", "4", "10–15", "Elbows soft, deep stretch", "3–1–1–2", "75s"],
-    ["Pec Dec", "4", "12–15", "2s squeeze", "2–1–1–2", "60s"],
-    ["Machine Lat Pulldown", "4", "10–15", "Drive elbows down", "2–1–1–1", "75s"],
-    ["HS Row", "4", "8–12", "Scap retraction focus", "2–0–1–2", "90s"],
-    ["Lat Pull-In", "4", "12–15", "Elbow tucked path", "3–1–1–1", "60s"],
-    ["Single-Arm HS High Row", "4", "10–15", "Full stretch → squeeze", "2–1–1–2", "75s"],
+HAMSTRINGS_CALVES = [
+    ["Seated Leg Curl - Warm Up", "2", "20", "Upper chest, control negative", "2–0–1–1", "90s"],
+    ["DB RDL", "6", "20-8", "Scaps set, mid-pec line", "2–0–1–1", "90s"],
+    ["Seated Leg Curl", "6", "20-8", "Elbows soft, deep stretch", "3–1–1–2", "75s"],
+    ["Hip Thrust", "5", "15-8", "2s squeeze", "2–1–1–2", "60s"],
+    ["Cable Leg Curl", "5", "15-8", "Drive elbows down", "2–1–1–1", "75s"],
     ["Leg Press Calf Raise", "4", "10–15", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
     ["Seated Calf Raise", "4", "15–20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
     [
-        Paragraph("<b><font color='red'>The Tormented Twin Peaks</font></b>", body_style),
-        "2", "Superset",
-        "Chest collapses, back ignites — both halves of the upper body screaming in one ritual.",
-        "2-1-1-2", "60s"
+        Paragraph("<b><font color='red'>The Crimson Coil</font></b>", body_style),
+        "2", "Ladder",
+        "Slow, squeezing contractions that feel like your hamstrings are winding up like ancient chains.",
+        "3-1-1-2", "75s"
     ]
 ]
 
 ARMS_ABS = [
-    ["Tricep Pushdown (V/Rope)", "4", "10–15", "Elbows locked, full ext", "2–1–1–2", "60s"],
-    ["EZ Skull Crushers", "4", "8–12", "Slow negative to forehead", "3–1–1–1", "75s"],
-    ["Single-Arm Tricep Ext", "4", "12–15", "Elbow tucked", "2–1–1–2", "60s"],
-    ["Dip Machine", "4", "8–12", "Chest fwd, tricep squeeze", "2–0–1–1", "75s"],
-    ["EZ Bar Curl", "4", "8–12", "Strict elbows", "2–0–1–1", "75s"],
-    ["Single-Arm Cable Curl", "4", "12–15", "Slow eccentric, peak", "2–1–1–2", "60s"],
-    ["Machine Curl", "4", "10–15", "Constant tension", "2–1–1–2", "60s"],
-    ["Hammer Curl", "4", "10–12", "Neutral grip, control", "2–0–1–1", "75s"],
+    ["Tricep Pushdown (V/Rope)", "6", "20-8", "Elbows locked, full ext", "2–1–1–2", "60s"],
+    ["EZ Skull Crushers", "5", "15-8", "Slow negative to forehead", "3–1–1–1", "75s"],
+    ["Single-Arm Tricep Ext", "5", "15-8", "Elbow tucked", "2–1–1–2", "60s"],
+    ["Dip Machine", "5", "AMRAP", "Chest fwd, tricep squeeze", "2–0–1–1", "75s"],
+    ["EZ Bar Curl", "5", "15-8", "Strict elbows", "2–0–1–1", "75s"],
+    ["Single-Arm Cable Curl", "6", "20-8", "Slow eccentric, peak", "2–1–1–2", "60s"],
+    ["Machine Curl", "5", "15-8", "Constant tension", "2–1–1–2", "60s"],
+    ["Hammer Curl", "6", "20-8", "Neutral grip, control", "2–0–1–1", "75s"],
     [
         Paragraph("<b><font color='red'>The Soul Siphon 21s</font></b>", body_style),
         "1", "Sequence",
@@ -319,6 +309,9 @@ HOW_TO = [
     "Progress only when all sets hit the top of the rep range cleanly.",
     "AMRAP = As Many Reps As Possible"
     "Perform all of the reps and sets of the pyramid"
+    "For sets of 5, pyramid goes: 15, 12, 10, 8, 8"
+    "For sets of 6, pyramid goes: 20, 16, 14, 12, 10, 8"
+    "For every workout you can use cables, free weights, or machines"
 ]
 
 RULES = [
@@ -390,7 +383,7 @@ CARDIO = [
 
 # Nutrition overview (phases + macros)
 NUTRITION_ROWS = [
-    ["1", "Weeks 1–5",  "1950", "200–210g", "100–120g", "55–65g",  "Strength + Fat Loss"],
+    ["1", "Weeks 1–5",  "2000", "200–210g", "100–120g", "55–65g",  "Strength + Fat Loss"],
     ["2", "Weeks 6–10", "1875", "200–210g", "90–100g",  "50–60g",  "Definition + Performance"],
     ["3", "Weeks 11–15","1800", "200–210g", "80–90g",   "45–55g",  "Tightening + Detail"],
     ["4", "Weeks 16–20","2200–2300 (2 days/week)", "200g", "150–170g", "60–65g", "Refeed Metabolism & Peak"],
@@ -541,11 +534,11 @@ def run():
     story += workout_block("👁 BACK FROM THE ABYSS", "Pull your strength from the shadows.", BACK_ABS)
     story.append(PageBreak())
     legs_colw = [175, 60, 60, 160, 70, 50]
-    story += workout_block("🩸 THE TORTURE CHAMBER — LEG DAY", "Abandon mercy. Embrace the pain.", LEGS_TORTURE,
+    story += workout_block("🩸 QUADS - THE CHAINSAW WALK", "Every Step Burns. No pauses. No mercy", QUADS,
                            colw=legs_colw)
     story += workout_block("🔥 SHOULDERS + TRAPS OF THE HEADLESS HORDE", "Carry the weight of the damned.", SHOULDERS_TRAPS)
     story.append(PageBreak())
-    story += workout_block("⚰️ CHEST + BACK OF THE FALLEN", "Where strength and sorrow intertwine.", CHEST_BACK)
+    story += workout_block("⚰️ HAMSTRINGS - THE MACHETE DRAG + CALVES OF THE DAMNED", "Long stretch, slow pull, relentless tension", HAMSTRINGS_CALVES)
     story += workout_block("💀 ARMS OF THE REAPER", "Each rep reaps another weakness.", ARMS_ABS)
     story.append(PageBreak())
 
