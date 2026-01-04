@@ -203,7 +203,7 @@ CHEST_CALVES = [
     ["DB Pull Over", "5", "15-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
     ["Incline Cable Fly", "6", "20-8", "Big stretch, soft elbows", "3–1–1–2", "60s"],
     ["Decline Cable Fly", "6", "20-8", "Stretch & squeeze", "3–1–1–2", "60s"],
-    ["Pec Dec", "5", "15-8 + DropSet", "2s peak squeeze. Flex chest on rest", "2–1–1–2", "45s"],
+    ["Pec Dec", "5", "15-8", "2s peak squeeze. Flex chest on rest", "2–1–1–2", "45s"],
     ["Leg Press Calf Raise", "4", "10–15", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
     ["Standing Calf Raise", "4", "15–20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
     [
@@ -215,11 +215,11 @@ CHEST_CALVES = [
 ]
 
 BACK_ABS = [
-    ["Low cable row", "5", "15-8", "Use Wide grip bar, keep elbows tucked and bring bar up at an angle, squeeze at top for 2 seconds", "2–2–1–1", "75s"],
-    ["Lat Pulldown", "6", "20-8", "Elbows down/in", "2–1–1–1", "75s"],
-    ["Reverse Grip Pulldown", "5", "15-8", "Underhand, squeeze low lats", "2–1–1–1", "75s"],
-    ["Single Arm Cable Row", "5", "15-8", "Isolate side, slight twist", "2–1–1–1", "60s"],
-    ["Dumbbell Chest-Supported High Row", "6", "20-8", "Upper lat stretch → squeeze", "2–1–1–2", "75s"],
+    ["Bent Over Row", "5", "15-8", "Hinge at the hips with a flat back, pull the weight to your lower ribs by driving elbows back. Control the descent—no jerking, no cheating.", "2–2–1–1", "60s"],
+    ["Lat Pulldown", "6", "20-8", "Elbows down/in", "2–1–1–1", "60s"],
+    ["Reverse Grip Pulldown", "6", "20-8", "Underhand, squeeze low lats", "2–1–1–1", "75s"],
+    ["Seated Cable Rows", "6", "20-8", "Sit tall, pull to the mid-torso with elbows back and a hard squeeze. Control the return to a full stretch—no momentum.", "2–1–1–1", "45s"],
+    ["One Arm Rows", "5", "15-8", "Lean on a bench with one arm, pull at an angle towards your torso", "2-1-1-1", "45s"],
     ["Straight Arm Pulldown", "6", "20-8", "Long stretch, brace ribs", "3–1–1–2", "60s"],
     ["Lat Pull-In", "6", "20-8", "Elbow close to ribs", "3–1–1–1", "60s"],
     [
@@ -234,9 +234,9 @@ BACK_ABS = [
 QUADS = [
     ["Leg Extension Warm Up", "2", "20", "Light, controlled; full squeeze, 2-sec hold at top", "2-2-1-1", "45s"],
     ["Barbell Back Squat", "5", "15-8", "Sit deep, drive through heels, core tight, no bounce", "3-1-1-1", "90s"],
-    ["Leg Press (Feet Low & Shoulder-Width)", "5", "15-8", "Drive through heels, no lockout, deep range", "3-1-1-1", "75s"],
+    ["Leg Press (Feet Low & Close-Stance)", "5", "15-8", "Drive through heels, no lockout, deep range", "3-1-1-1", "75s"],
     ["Hack Squat", "6", "20-8", "Knees forward, back glued to the pad, sink deep without hip roll, drive up through mid-foot, and never fully lock out.", "3-1-1-1", "60s"],
-    ["Smit Machine Squat", "5", "15-8", "Angled Smith Machine", "3-1-1-1", "45s"],
+    ["Smith Machine Squat", "5", "15-8", "Angled Smith Machine", "3-1-1-1", "45s"],
     ["Leg Extensions", "6", "20-8", "Constant tension; last set drop to failure", "2-1-1-2", "60s"],
     [
         Paragraph("<b><font color='red'>The Knee-Reaper Ladder</font></b>", body_style),
@@ -251,7 +251,6 @@ SHOULDERS_TRAPS = [
     ["DB Lat Raise", "10", "12–15", "Go for blood-volume, slow negatives", "2–1–1–2", "45-60s"],
     ["Cable Lat Raise", "5", "15-8", "lead with elbow, pause 1s at top, slow negative", "2-1-1-2", "60s"],
     ["Reverse Pec Deck", "6", "20-8", "Rear-delt squeeze, control the eccentric", "2–1–1–2", "60s"],
-    ["Reverse Cable Fly", "6", "20-8", "Keep constant tenstion", "3–1–1–2", "60s"],
     ["Face Pulls", "5", "15-8", "Elbows High, rear-delt peak squeeze", "2–1–1–2", "60s"],
     ["Barbell Shrug", "5", "15-8", "2-second squeeze at peak, slow 3-second descent.", "2–2–1–2", "75s"],
     ["Behind Back Shrug", "5", "15-8", "Explode up (quick) → Squeeze at the top → Lower slow (2–3 seconds)", "1–2–2–1", "60s"],
@@ -280,14 +279,14 @@ HAMSTRINGS_CALVES = [
 ]
 
 ARMS_ABS = [
-    ["Tricep Pushdown (V/Rope)", "6", "20-8", "Elbows locked, full ext", "2–1–1–2", "60s"],
-    ["EZ Skull Crushers", "5", "15-8", "Slow negative to forehead", "3–1–1–1", "75s"],
-    ["Single-Arm Tricep Ext", "5", "15-8", "Elbow tucked", "2–1–1–2", "60s"],
-    ["Dip Machine", "5", "AMRAP", "Chest fwd, tricep squeeze", "2–0–1–1", "75s"],
-    ["EZ Bar Curl", "5", "15-8", "Strict elbows", "2–0–1–1", "75s"],
-    ["Single-Arm Cable Curl", "6", "20-8", "Slow eccentric, peak", "2–1–1–2", "60s"],
-    ["Machine Curl", "5", "15-8", "Constant tension", "2–1–1–2", "60s"],
-    ["Hammer Curl", "6", "20-8", "Neutral grip, control", "2–0–1–1", "75s"],
+    ["Tricep Pushdown (V/Rope)", "6", "20-8", "Elbows locked, full ext", "2–1–1–2", "45s"],
+    ["EZ Skull Crushers", "5", "15-8", "Slow negative to forehead", "3–1–1–1", "60s"],
+    ["Single-Arm Tricep Ext", "5", "15-8", "Elbow tucked", "2–1–1–2", "45s"],
+    ["Tricep Extension Machine", "5", "AMRAP", "Seated, squeeze at the bottom", "2–2–1–1", "45s"],
+    ["EZ Bar Curl", "5", "15-8", "Strict elbows", "2–0–1–1", "45s"],
+    ["Single-Arm Cable Curl", "6", "20-8", "Slow eccentric, peak", "2–1–1–2", "45s"],
+    ["Machine Preacher Curl", "5", "15-8", "Constant tension", "2–1–1–2", "60s"],
+    ["Hammer Curl", "6", "20-8", "Neutral grip, control", "2–0–1–1", "45s"],
     [
         Paragraph("<b><font color='red'>The Soul Siphon 21s</font></b>", body_style),
         "1", "Sequence",
@@ -310,7 +309,7 @@ HOW_TO = [
     "AMRAP = As Many Reps As Possible",
     "Perform all of the reps and sets of the pyramid",
     "For sets of 5, pyramid goes: 15, 12, 10, 8, 8",
-    "For sets of 6, pyramid goes: 20, 16, 14, 12, 10, 8",
+    "For sets of 6, pyramid goes: 20, 15, 12, 10, 8, 8",
     "For every workout you can use cables, free weights, or machines"
 ]
 
@@ -321,6 +320,7 @@ RULES = [
     "Macros Are Law — Track thy fuel; the body keeps no secrets.",
     "Rest Only in the Coffin — Sleep is the recovery of the dead.",
     "Hydration Is The Blood Of The Beast - Deny it, And The Monster Dies.",
+    "The Rule of the Full Kill = Full range of motion for every exercise. No excuses!"
 ]
 
 Finishers = {
@@ -370,6 +370,7 @@ Finishers = {
 MORNING_RITUALS = [
     "Stomach Vacuums — 3–5 sets × 15–30 sec (fasted on waking).",
     "Standing/Seated Ab Contractions — 3 sets × 20 reps or 10-sec squeezes.",
+    "Cardio"
 ]
 
 CARDIO = [
