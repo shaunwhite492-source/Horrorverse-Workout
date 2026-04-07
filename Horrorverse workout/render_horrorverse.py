@@ -405,7 +405,7 @@ ADJUSTMENT_RULES = [
 ]
 
 # ---------- Build document ----------
-class HorrorDoc(BaseDocTemplate)
+class HorrorDoc(BaseDocTemplate):
     def __init__(self, filename, **kw):
         BaseDocTemplate.__init__(self, filename, pagesize=A4, **kw)
         frame = Frame(1.3*cm, 1.3*cm, PAGE_W-2.6*cm, PAGE_H-2.6*cm, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
