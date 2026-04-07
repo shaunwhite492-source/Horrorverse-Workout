@@ -196,16 +196,15 @@ def chapter_divider(title_text, one_liner, icon=""):
 
 # ---------- Content data (condensed from our plan) ----------
 # Each day: [ [Exercise, Sets, Reps, Form/Scheme, Tempo, Rest], ... ]
-CHEST_CALVES = [
+CHEST = [
     ["Incline Bench (DB/BB/Smith)", "6", "20-8", "Slight arch, scapula set", "2–0–1–1", "60s"],
     ["Bench Press (DB/BB/Machine)", "5", "15-8", "Elbows ~45°, full ROM", "2–0–1–1", "60s"],
     ["HS Incline Press", "5", "15-8", "Controlled eccentric, chest lead", "2–0–1–2", "45s"],
-    ["DB Pull Over", "5", "15-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
-    ["Incline Cable Fly", "6", "20-8", "Big stretch, soft elbows", "3–1–1–2", "60s"],
-    ["Decline Cable Fly", "6", "20-8", "Stretch & squeeze", "3–1–1–2", "60s"],
-    ["Pec Dec", "5", "15-8", "2s peak squeeze. Flex chest on rest", "2–1–1–2", "45s"],
-    ["Leg Press Calf Raise", "4", "10–15", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
-    ["Standing Calf Raise", "4", "15–20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
+    ["Pullover", "5", "15-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
+    ["Incline Dumbbell Fly", "6", "20-8", "Big stretch, soft elbows", "3–1–1–2", "60s"],
+    ["Seated G Press", "6", "20", "Stretch & squeeze", "3–1–1–2", "60s"],
+    ["Pec Dec", "6", "20-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
+    ["Chest Dips", "5", "15-8", "2s peak squeeze. Flex chest on rest", "2–1–1–2", "45s"],
     [
         Paragraph("<b><font color='red'>The Heart-Ripper Drop Set</font></b>", body_style),
         "1", "12 (Dropsets)",
@@ -221,7 +220,7 @@ BACK_ABS = [
     ["Seated Cable Rows", "6", "20-8", "Sit tall, pull to the mid-torso with elbows back and a hard squeeze. Control the return to a full stretch—no momentum.", "2–1–1–1", "45s"],
     ["One Arm Rows", "5", "15-8", "Lean on a bench with one arm, pull at an angle towards your torso", "2-1-1-1", "45s"],
     ["Straight Arm Pulldown", "6", "20-8", "Long stretch, brace ribs", "3–1–1–2", "60s"],
-    ["Lat Pull-In", "6", "20-8", "Elbow close to ribs", "3–1–1–1", "60s"],
+    ["Single Arm Pulldown", "6", "15", "Elbow close to ribs", "3–1–1–1", "60s"],
     [
         Paragraph("<b><font color='red'>The Doom Lift</font></b>", body_style),
         "3", "6–10",
@@ -231,13 +230,15 @@ BACK_ABS = [
 ]
 
 
-QUADS = [
+QUADS_CALVES = [
     ["Leg Extension Warm Up", "2", "20", "Light, controlled; full squeeze, 2-sec hold at top", "2-2-1-1", "45s"],
     ["Barbell Back Squat", "5", "15-8", "Sit deep, drive through heels, core tight, no bounce", "3-1-1-1", "90s"],
     ["Leg Press (Feet Low & Close-Stance)", "5", "15-8", "Drive through heels, no lockout, deep range", "3-1-1-1", "75s"],
     ["Hack Squat", "6", "20-8", "Knees forward, back glued to the pad, sink deep without hip roll, drive up through mid-foot, and never fully lock out.", "3-1-1-1", "60s"],
     ["Smith Machine Squat", "5", "15-8", "Angled Smith Machine", "3-1-1-1", "45s"],
     ["Leg Extensions", "6", "20-8", "Constant tension; last set drop to failure", "2-1-1-2", "60s"],
+    ["Seated Calf Raise", "4", "20", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
+    ["Standing Calf Raise", "4", "20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
     [
         Paragraph("<b><font color='red'>The Knee-Reaper Ladder</font></b>", body_style),
         "2", "Ladder",
@@ -368,7 +369,7 @@ Finishers = {
 
 
 MORNING_RITUALS = [
-    "Stomach Vacuums — 3–5 sets × 15–30 sec (fasted on waking).",
+    "Stomach Vacuums — 5 sets × 15–30 sec (fasted on waking).",
     "Standing/Seated Ab Contractions — 3 sets × 20 reps or 10-sec squeezes.",
     "Cardio"
 ]
@@ -384,14 +385,27 @@ CARDIO = [
 
 # Nutrition overview (phases + macros)
 NUTRITION_ROWS = [
-    ["1", "Weeks 1–5",  "2000", "200–210g", "100–120g", "55–65g",  "Strength + Fat Loss"],
-    ["2", "Weeks 6–10", "1875", "200–210g", "90–100g",  "50–60g",  "Definition + Performance"],
-    ["3", "Weeks 11–15","1800", "200–210g", "80–90g",   "45–55g",  "Tightening + Detail"],
-    ["4", "Weeks 16–20","2200–2300 (2 days/week)", "200g", "150–170g", "60–65g", "Refeed Metabolism & Peak"],
+    ["1", "Weeks 1–5",  "2350", "230g", "210g", "65g",  "Build momentum and protect performance"],
+    ["2", "Weeks 6–10", "2250", "230g", "185g",  "60g",  "Push steady fat loss without crashing recovery"],
+    ["3", "Weeks 11–15","2150", "235g", "160g",   "55g",  "Start digging deeper and revealing more visible changes"],
+    ["4", "Weeks 16–20","2050", "235g", "135g", "50g", "Fight through the grind and tighten stubborn areas"],
+    ["5", "Weeks 21-25", "1900-1950", "240g", "90-115g", "45g", "Finish hard and chase conditioning"],
+]
+
+REFEED_PROTOCOL = [
+    "Weeks 1-10 = 1 refeed meal every 7-10 days if needed",
+    "Weeks 11-20 = 1 higher-carb day every 10-14 days if weight loss is on track",
+    "Weeks 21-25 = only use refeeds strategically if you're flattening out hard or performance is tanking.",
+    "Refeed Day = add 50-100g carbs. Keep protein and fat the same"
+]
+
+ADJUSTMENT_RULES = [
+    "If weight loss is not dropping for 2 straight weeks, do one of the folllowing:",
+    "drop 20-25g carbs or drop 5g fat or add 10 minutes to cardio"
 ]
 
 # ---------- Build document ----------
-class HorrorDoc(BaseDocTemplate):
+class HorrorDoc(BaseDocTemplate)
     def __init__(self, filename, **kw):
         BaseDocTemplate.__init__(self, filename, pagesize=A4, **kw)
         frame = Frame(1.3*cm, 1.3*cm, PAGE_W-2.6*cm, PAGE_H-2.6*cm, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
@@ -526,16 +540,17 @@ def run():
     story += bullets_block("⚔️ Rules of the HorrorVerse", RULES)
     story.append(PageBreak())
 
-    #FINISHERS
+    #FINISHERS/Adjustment Protocols
     story += finishers_block("🩸 Finishers For The Psychos", Finishers)
+    story += bullets_block("Adjustment Rules", ADJUSTMENT_RULES)
     story.append(PageBreak())
 
     # WORKOUT CHAPTERS (with one-liners)
-    story += workout_block("⚰️ CHEST + CALVES OF THE DAMNED", "The heart still beats… but not for long.", CHEST_CALVES)
+    story += workout_block("⚰️ CHEST + CALVES OF THE DAMNED", "The heart still beats… but not for long.", CHEST)
     story += workout_block("👁 BACK FROM THE ABYSS", "Pull your strength from the shadows.", BACK_ABS)
     story.append(PageBreak())
     legs_colw = [175, 60, 60, 160, 70, 50]
-    story += workout_block("🩸 QUADS - THE CHAINSAW WALK", "Every Step Burns. No pauses. No mercy", QUADS,
+    story += workout_block("🩸 QUADS - THE CHAINSAW WALK", "Every Step Burns. No pauses. No mercy", QUADS_CALVES,
                            colw=legs_colw)
     story += workout_block("🔥 SHOULDERS + TRAPS OF THE HEADLESS HORDE", "Carry the weight of the damned.", SHOULDERS_TRAPS)
     story.append(PageBreak())
@@ -553,6 +568,7 @@ def run():
     header = ["Phase", "Weeks", "Calories", "Protein", "Carbs", "Fats", "Focus"]
     colw = [45, 75, 110, 85, 75, 65, 150]
     story.append(horror_table(header, NUTRITION_ROWS, colw))
+    story += bullets.block("Feeding the Zombie: Refeed Protocols", REFEED_PROTOCOL)
     story.append(PageBreak())
 
     # FINAL QUOTE PAGE
