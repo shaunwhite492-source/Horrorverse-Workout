@@ -568,7 +568,7 @@ def run():
     header = ["Phase", "Weeks", "Calories", "Protein", "Carbs", "Fats", "Focus"]
     colw = [45, 75, 110, 85, 75, 65, 150]
     story.append(horror_table(header, NUTRITION_ROWS, colw))
-    story += bullets.block("Feeding the Zombie: Refeed Protocols", REFEED_PROTOCOL)
+    story += bullets_block("Feeding the Zombie: Refeed Protocols", REFEED_PROTOCOL)
     story.append(PageBreak())
 
     # FINAL QUOTE PAGE
