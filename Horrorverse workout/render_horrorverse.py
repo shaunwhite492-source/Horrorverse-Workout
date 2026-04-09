@@ -4,6 +4,7 @@
 # Optional: place Creepster-Regular.ttf in the same folder for gothic headings.
 # Place your logo as horrorverse_logo.png in the same folder.
 
+from matplotlib.pyplot import step
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
 from reportlab.pdfgen import canvas
@@ -15,6 +16,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.utils import ImageReader
 from reportlab.lib.styles import ParagraphStyle
+from reportlab.lib.colors import HexColor
 import os
 
 OUTPUT = "HorrorVerse_20_Week_Cut_Guide.pdf"
@@ -22,6 +24,8 @@ LOGO = "horrorverse_logo.png"          # <-- put your logo file here
 CREEPSTER = "Creepster-Regular.ttf"    # <-- optional gothic font (falls back if missing)
 DRIP_IMG = "blood_drip.png"
 PAGE_W, PAGE_H = A4
+BLOOD = HexColor("#b30000")
+BLOOD_DARK = HexColor("#5c0000")
 
 # ---------- Font setup ----------
 HAS_CREEP = False
@@ -413,23 +417,16 @@ class HorrorDoc(BaseDocTemplate):
         self.addPageTemplates([template])
 
 class BloodDripDivider(Flowable):
-    """
-    A blood-drip divider bar that draws inside the text frame.
-    Draws a dark red underlayer + bright red bar + several drips.
-    """
-    def __init__(self, width=None, thickness=10, drip_count=7, max_drip=28, gap=8):
+    def __init__(self, width=None, thickness=14, drip_count=9, max_drip=40, gap=10):
         super().__init__()
-        # If width not provided, match your frame width (A4 minus 2.6cm margins)
-        self.width = width if width else (PAGE_W - 2.6*cm)
+        self.width = width if width else (PAGE_W - 2.6 * cm)
         self.thickness = thickness
         self.drip_count = drip_count
         self.max_drip = max_drip
         self.gap = gap
-        # Height the flowable occupies (bar thickness + max drip + some gap below)
         self._height = thickness + max_drip + gap
 
     def wrap(self, availWidth, availHeight):
-        # Respect frame width automatically
         self.width = min(self.width, availWidth)
         return self.width, self._height
 
@@ -437,43 +434,71 @@ class BloodDripDivider(Flowable):
         c = self.canv
         w = self.width
         t = self.thickness
-        maxd = self.max_drip
 
-        # 1) Underlayer dark bar (fake “shadow”)
         c.saveState()
+
+        # dark base layer
         c.setFillColor(BLOOD_DARK)
         c.rect(0, self._height - t, w, t, stroke=0, fill=1)
 
-        # 2) Foreground bright bar (slightly thinner so shadow peeks)
+        # brighter front layer, slightly uneven look
         c.setFillColor(BLOOD)
-        c.rect(0, self._height - (t*0.9), w, (t*0.8), stroke=0, fill=1)
+        c.rect(0, self._height - t + 2, w, t - 4, stroke=0, fill=1)
 
-        # 3) Drips (simple teardrops with small bezier/ovals)
-        step = w / (self.drip_count + 1)
-        x = step
-        for i in range(self.drip_count):
-            # Vary drip length a bit
-            length = maxd * (0.55 + 0.45 * ((i % 3) / 2))  # mild variation without randomness
-            top_y = self._height - (t*0.9)
-            bottom_y = top_y - length
+        # more natural drip layout
+        drip_specs = [
+            (0.10, 18, 24),
+            (0.20, 14, 34),
+            (0.30, 16, 46),
+            (0.40, 12, 26),
+            (0.50, 15, 35),
+            (0.60, 18, 50),
+            (0.72, 13, 28),
+            (0.83, 16, 40),
+            (0.93, 15, 44),
+        ]
 
-            # Dark red backdrop “shadow”
+        top_y = self._height - t + 2
+
+        for pos, drip_w, drip_len in drip_specs:
+            x = w * pos
+            bottom_y = top_y - drip_len
+
+            # shadow drip
             c.setFillColor(BLOOD_DARK)
-            path = c.beginPath()
-            path.moveTo(x-2, top_y)
-            path.curveTo(x-6, top_y - length*0.35, x-3, top_y - length*0.75, x-2, bottom_y)
-            path.curveTo(x, bottom_y-1, x+2, top_y - length*0.75, x+2, top_y)
-            c.drawPath(path, fill=1, stroke=0)
+            shadow = c.beginPath()
+            shadow.moveTo(x - drip_w/2 - 1.5, top_y)
+            shadow.curveTo(
+                x - drip_w, top_y - drip_len * 0.30,
+                x - drip_w * 0.55, top_y - drip_len * 0.82,
+                x - 1.5, bottom_y
+            )
+            shadow.curveTo(
+                x, bottom_y - 4,
+                x + drip_w * 0.55, top_y - drip_len * 0.82,
+                x + drip_w/2 + 1.5, top_y
+            )
+            shadow.close()
+            c.drawPath(shadow, fill=1, stroke=0)
+            c.circle(x, bottom_y - 2, drip_w * 0.22, stroke=0, fill=1)
 
-            # Bright red foreground drip
+            # bright drip
             c.setFillColor(BLOOD)
-            path2 = c.beginPath()
-            path2.moveTo(x-1.4, top_y)
-            path2.curveTo(x-4, top_y - length*0.34, x-2, top_y - length*0.72, x-1.1, bottom_y+1.2)
-            path2.curveTo(x, bottom_y, x+1.4, top_y - length*0.70, x+1.4, top_y)
-            c.drawPath(path2, fill=1, stroke=0)
-
-            x += step
+            drip = c.beginPath()
+            drip.moveTo(x - drip_w/2, top_y)
+            drip.curveTo(
+                x - drip_w * 0.75, top_y - drip_len * 0.28,
+                x - drip_w * 0.40, top_y - drip_len * 0.78,
+                x - 1, bottom_y + 1
+            )
+            drip.curveTo(
+                x, bottom_y,
+                x + drip_w * 0.40, top_y - drip_len * 0.78,
+                x + drip_w/2, top_y
+            )
+            drip.close()
+            c.drawPath(drip, fill=1, stroke=0)
+            c.circle(x, bottom_y, drip_w * 0.18, stroke=0, fill=1)
 
         c.restoreState()
 
@@ -488,8 +513,8 @@ def cover_story():
         flow.append(im)
         flow.append(Spacer(1, 0.6*cm))
     # Title + subtitle + quote
-    flow.append(Paragraph("Shaun White’s HorrorVerse 20-Week Cut Guide", title_style))
-    flow.append(Paragraph("<i>A 20-Week Transformation from Flesh to Fury</i>", sub_style))
+    flow.append(Paragraph("Shaun White’s HorrorVerse 25-Week Cut Guide", title_style))
+    flow.append(Paragraph("<i>A 25-Week Transformation from Flesh to Fury</i>", sub_style))
     flow.append(Paragraph("“Become the monster that burns the fat.”", quote_style))
     # Footer + dedication (cover only)
     flow.append(Paragraph("© HorrorVerse Studios", mini_style))
@@ -553,7 +578,6 @@ def run():
     story += workout_block("🩸 QUADS - THE CHAINSAW WALK", "Every Step Burns. No pauses. No mercy", QUADS_CALVES,
                            colw=legs_colw)
     story += workout_block("🔥 SHOULDERS + TRAPS OF THE HEADLESS HORDE", "Carry the weight of the damned.", SHOULDERS_TRAPS)
-    story.append(PageBreak())
     story += workout_block("⚰️ HAMSTRINGS - THE MACHETE DRAG + CALVES OF THE DAMNED", "Long stretch, slow pull, relentless tension", HAMSTRINGS_CALVES)
     story += workout_block("💀 ARMS OF THE REAPER", "Each rep reaps another weakness.", ARMS_ABS)
     story.append(PageBreak())
@@ -564,7 +588,7 @@ def run():
     story.append(PageBreak())
 
     # NUTRITION OVERVIEW
-    story.append(Paragraph("🍽️ 20-Week Nutrition & Macro Overview", h2_style))
+    story.append(Paragraph("🍽️ 25-Week Nutrition & Macro Overview", h2_style))
     header = ["Phase", "Weeks", "Calories", "Protein", "Carbs", "Fats", "Focus"]
     colw = [45, 75, 110, 85, 75, 65, 150]
     story.append(horror_table(header, NUTRITION_ROWS, colw))
