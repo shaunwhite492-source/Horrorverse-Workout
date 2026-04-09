@@ -208,7 +208,7 @@ CHEST = [
     ["Incline Dumbbell Fly", "6", "20-8", "Big stretch, soft elbows", "3–1–1–2", "60s"],
     ["Seated G Press", "6", "20", "Stretch & squeeze", "3–1–1–2", "60s"],
     ["Pec Dec", "6", "20-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
-    ["Chest Dips", "5", "15-8", "2s peak squeeze. Flex chest on rest", "2–1–1–2", "45s"],
+    ["Chest Dips/Lower chest press", "5", "15-8", "2s peak squeeze. Flex chest on rest", "2–1–1–2", "45s"],
     [
         Paragraph("<b><font color='red'>The Heart-Ripper Drop Set</font></b>", body_style),
         "1", "12 (Dropsets)",
@@ -251,7 +251,7 @@ QUADS_CALVES = [
     ],
 ]
 
-SHOULDERS_TRAPS = [
+SHOULDERS_TRAPS_ABS = [
     ["BB Push Press", "6", "20-8", "Explosive power through lockout; control the drop", "2–0–1–0", "90s"],
     ["DB Lat Raise", "10", "12–15", "Go for blood-volume, slow negatives", "2–1–1–2", "45-60s"],
     ["Cable Lat Raise", "5", "15-8", "lead with elbow, pause 1s at top, slow negative", "2-1-1-2", "60s"],
@@ -270,11 +270,13 @@ SHOULDERS_TRAPS = [
 HAMSTRINGS_CALVES = [
     ["Seated Leg Curl - Warm Up", "2", "20", "Upper chest, control negative", "2–0–1–1", "90s"],
     ["DB RDL", "6", "20-8", "Scaps set, mid-pec line", "2–0–1–1", "90s"],
-    ["Seated Leg Curl", "6", "20-8", "Elbows soft, deep stretch", "3–1–1–2", "75s"],
+    ["Lying Leg Curl", "6", "20-8", "Elbows soft, deep stretch", "3–1–1–2", "75s"],
     ["Hip Thrust", "5", "15-8", "2s squeeze", "2–1–1–2", "60s"],
-    ["Cable Leg Curl", "5", "15-8", "Drive elbows down", "2–1–1–1", "75s"],
-    ["Leg Press Calf Raise", "4", "10–15", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
-    ["Seated Calf Raise", "4", "15–20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
+    ["One-Legged Leg Curl", "5", "15-8", "Drive elbows down", "2–1–1–1", "75s"],
+    ["Abductor Machine", "5", "15-8", "Squeeze, slow eccentric", "2–1–1–2", "45s"],
+    ["Abductor Machine", "5", "15-8", "Squeeze, slow eccentric", "2–1–1–2", "45s"],
+    ["Standing Calf Raise", "6", "20", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
+    ["Seated Calf Raise", "6", "20", "Slow control, long squeeze", "2–1–1–2", "45–60s"],
     [
         Paragraph("<b><font color='red'>The Crimson Coil</font></b>", body_style),
         "2", "Ladder",
@@ -284,12 +286,12 @@ HAMSTRINGS_CALVES = [
 ]
 
 ARMS_ABS = [
-    ["Tricep Pushdown (V/Rope)", "6", "20-8", "Elbows locked, full ext", "2–1–1–2", "45s"],
-    ["EZ Skull Crushers", "5", "15-8", "Slow negative to forehead", "3–1–1–1", "60s"],
-    ["Single-Arm Tricep Ext", "5", "15-8", "Elbow tucked", "2–1–1–2", "45s"],
-    ["Tricep Extension Machine", "5", "AMRAP", "Seated, squeeze at the bottom", "2–2–1–1", "45s"],
-    ["EZ Bar Curl", "5", "15-8", "Strict elbows", "2–0–1–1", "45s"],
-    ["Single-Arm Cable Curl", "6", "20-8", "Slow eccentric, peak", "2–1–1–2", "45s"],
+    ["Tricep Pushdown (V/Rope), Change weekly", "6", "20-8", "Elbows locked, full ext", "2–1–1–2", "45s"],
+    ["Overhead Tricep Extension", "6", "20-8", "Slow negative to forehead", "3–1–1–1", "60s"],
+    ["Single-Arm Tricep Ext", "6", "20-8", "Elbow tucked", "2–1–1–2", "45s"],
+    ["Dip Machine", "5", "AMRAP", "Seated, squeeze at the bottom", "2–2–1–1", "45s"],
+    ["EZ Bar Curl", "6", "AMRAP", "Strict elbows", "2–0–1–1", "45s"],
+    ["Seated Machine Curl", "6", "20-8", "Slow eccentric, peak", "2–1–1–2", "45s"],
     ["Machine Preacher Curl", "5", "15-8", "Constant tension", "2–1–1–2", "60s"],
     ["Hammer Curl", "6", "20-8", "Neutral grip, control", "2–0–1–1", "45s"],
     [
@@ -577,7 +579,7 @@ def run():
     legs_colw = [175, 60, 60, 160, 70, 50]
     story += workout_block("🩸 QUADS - THE CHAINSAW WALK", "Every Step Burns. No pauses. No mercy", QUADS_CALVES,
                            colw=legs_colw)
-    story += workout_block("🔥 SHOULDERS + TRAPS OF THE HEADLESS HORDE", "Carry the weight of the damned.", SHOULDERS_TRAPS)
+    story += workout_block("🔥 SHOULDERS + TRAPS OF THE HEADLESS HORDE", "Carry the weight of the damned.", SHOULDERS_TRAPS_ABS)
     story += workout_block("⚰️ HAMSTRINGS - THE MACHETE DRAG + CALVES OF THE DAMNED", "Long stretch, slow pull, relentless tension", HAMSTRINGS_CALVES)
     story += workout_block("💀 ARMS OF THE REAPER", "Each rep reaps another weakness.", ARMS_ABS)
     story.append(PageBreak())
