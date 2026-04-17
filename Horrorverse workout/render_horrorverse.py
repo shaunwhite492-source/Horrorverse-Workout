@@ -204,7 +204,7 @@ CHEST = [
     ["Incline Bench (DB/BB/Smith)", "6", "20-8", "Slight arch, scapula set", "2–0–1–1", "60s"],
     ["Bench Press (DB/BB/Machine)", "5", "15-8", "Elbows ~45°, full ROM", "2–0–1–1", "60s"],
     ["HS Incline Press", "5", "15-8", "Controlled eccentric, chest lead", "2–0–1–2", "45s"],
-    ["Chest Press", "5", "15-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
+    ["Machine Chest Press", "5", "15-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
     ["Incline Dumbbell Fly", "6", "20-8", "Big stretch, soft elbows", "3–1–1–2", "60s"],
     ["Seated G Press", "6", "20", "Stretch & squeeze", "3–1–1–2", "60s"],
     ["Pec Dec", "6", "20-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
@@ -254,7 +254,7 @@ QUADS_CALVES = [
 SHOULDERS_TRAPS_ABS = [
     ["BB Push Press", "6", "20-8", "Explosive power through lockout; control the drop", "2–0–1–0", "90s"],
     ["DB Upright Row", "5", "15", "Lead with elbows, no higher than collarbone", "2–1–1–2", "60s"],
-    ["DB Lat Raise", "10", "12–15", "Go for blood-volume, slow negatives", "2–1–1–2", "45-60s"],
+    ["DB Lat Raise", "5", "12–15", "Go for blood-volume, slow negatives", "2–1–1–2", "45-60s"],
     ["Machine Lat Raise", "5", "15-8", "lead with elbow, pause 1s at top, slow negative", "2-1-1-2", "60s"],
     ["Reverse Pec Deck", "10", "20", "Rear-delt squeeze, control the eccentric", "2–1–1–2", "60s"],
     ["Barbell Shrug", "5", "15-8", "2-second squeeze at peak, slow 3-second descent.", "2–2–1–2", "75s"],
@@ -286,13 +286,13 @@ HAMSTRINGS_CALVES = [
 
 ARMS_ABS = [
     ["Tricep Pushdown (V/Rope), Change weekly", "6", "20-8", "Elbows locked, full ext", "2–1–1–2", "45s"],
-    ["Overhead Tricep Extension", "6", "20-8", "Slow negative to forehead", "3–1–1–1", "60s"],
+    ["EZ Bar Overhead Tricep Extension", "6", "20-8", "Slow negative to forehead", "3–1–1–1", "60s"],
     ["Single-Arm Tricep Ext", "6", "20-8", "Elbow tucked", "2–1–1–2", "45s"],
     ["Dip Machine", "5", "AMRAP", "Seated, squeeze at the bottom", "2–2–1–1", "45s"],
-    ["EZ Bar Curl", "6", "AMRAP", "Strict elbows", "2–0–1–1", "45s"],
-    ["Seated Machine Curl", "6", "20-8", "Slow eccentric, peak", "2–1–1–2", "45s"],
+    ["EZ Bar Curl", "5", "AMRAP", "Strict elbows", "2–0–1–1", "45s"],
+    ["Seated Machine Curl", "6", "AMRAP", "Slow eccentric, peak", "2–1–1–2", "45s"],
     ["Machine Preacher Curl", "5", "15-8", "Constant tension", "2–1–1–2", "60s"],
-    ["Hammer Curl", "6", "20-8", "Neutral grip, control", "2–0–1–1", "45s"],
+    ["Hammer Curl", "5", "15-8", "Neutral grip, control", "2–0–1–1", "45s"],
     [
         Paragraph("<b><font color='red'>The Soul Siphon 21s</font></b>", body_style),
         "1", "Sequence",
