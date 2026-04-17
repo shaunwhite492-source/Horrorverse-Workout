@@ -204,7 +204,7 @@ CHEST = [
     ["Incline Bench (DB/BB/Smith)", "6", "20-8", "Slight arch, scapula set", "2–0–1–1", "60s"],
     ["Bench Press (DB/BB/Machine)", "5", "15-8", "Elbows ~45°, full ROM", "2–0–1–1", "60s"],
     ["HS Incline Press", "5", "15-8", "Controlled eccentric, chest lead", "2–0–1–2", "45s"],
-    ["Pullover", "5", "15-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
+    ["Chest Press", "5", "15-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
     ["Incline Dumbbell Fly", "6", "20-8", "Big stretch, soft elbows", "3–1–1–2", "60s"],
     ["Seated G Press", "6", "20", "Stretch & squeeze", "3–1–1–2", "60s"],
     ["Pec Dec", "6", "20-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
@@ -253,12 +253,11 @@ QUADS_CALVES = [
 
 SHOULDERS_TRAPS_ABS = [
     ["BB Push Press", "6", "20-8", "Explosive power through lockout; control the drop", "2–0–1–0", "90s"],
+    ["DB Upright Row", "5", "15", "Lead with elbows, no higher than collarbone", "2–1–1–2", "60s"],
     ["DB Lat Raise", "10", "12–15", "Go for blood-volume, slow negatives", "2–1–1–2", "45-60s"],
-    ["Cable Lat Raise", "5", "15-8", "lead with elbow, pause 1s at top, slow negative", "2-1-1-2", "60s"],
-    ["Reverse Pec Deck", "6", "20-8", "Rear-delt squeeze, control the eccentric", "2–1–1–2", "60s"],
-    ["Face Pulls", "5", "15-8", "Elbows High, rear-delt peak squeeze", "2–1–1–2", "60s"],
+    ["Machine Lat Raise", "5", "15-8", "lead with elbow, pause 1s at top, slow negative", "2-1-1-2", "60s"],
+    ["Reverse Pec Deck", "10", "20", "Rear-delt squeeze, control the eccentric", "2–1–1–2", "60s"],
     ["Barbell Shrug", "5", "15-8", "2-second squeeze at peak, slow 3-second descent.", "2–2–1–2", "75s"],
-    ["Behind Back Shrug", "5", "15-8", "Explode up (quick) → Squeeze at the top → Lower slow (2–3 seconds)", "1–2–2–1", "60s"],
     [
         Paragraph("<b><font color='red'>The Hangman's Halo</font></b>", body_style),
         "2", "Sequence",
