@@ -201,11 +201,10 @@ def chapter_divider(title_text, one_liner, icon=""):
 # ---------- Content data (condensed from our plan) ----------
 # Each day: [ [Exercise, Sets, Reps, Form/Scheme, Tempo, Rest], ... ]
 CHEST = [
-    ["Incline Bench (DB/BB/Smith)", "6", "20-8", "Slight arch, scapula set", "2–0–1–1", "60s"],
+    ["Incline Bench (DB/BB/Smith)", "5", "15-8", "Slight arch, scapula set", "2–0–1–1", "60s"],
     ["Bench Press (DB/BB/Machine)", "5", "15-8", "Elbows ~45°, full ROM", "2–0–1–1", "60s"],
     ["HS Incline Press", "5", "15-8", "Controlled eccentric, chest lead", "2–0–1–2", "45s"],
-    ["Machine Chest Press", "5", "15-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
-    ["Incline Dumbbell Fly", "6", "20-8", "Big stretch, soft elbows", "3–1–1–2", "60s"],
+    ["Incline Cable Fly", "6", "20-8", "Big stretch, soft elbows", "3–1–1–2", "60s"],
     ["Seated G Press", "6", "20", "Stretch & squeeze", "3–1–1–2", "60s"],
     ["Pec Dec", "6", "20-8", "Grip the DB palms up, sit back on edge of bench", "2–0–1–1", "45s"],
     ["Chest Dips/Lower chest press", "5", "15-8", "2s peak squeeze. Flex chest on rest", "2–1–1–2", "45s"],
@@ -219,12 +218,12 @@ CHEST = [
 
 BACK_ABS = [
     ["Bent Over Row", "5", "15-8", "Hinge at the hips with a flat back, pull the weight to your lower ribs by driving elbows back. Control the descent—no jerking, no cheating.", "2–2–1–1", "60s"],
-    ["Lat Pulldown", "6", "20-8", "Elbows down/in", "2–1–1–1", "60s"],
-    ["Reverse Grip Pulldown", "6", "20-8", "Underhand, squeeze low lats", "2–1–1–1", "75s"],
+    ["Lat Pulldown", "6", "20-8", "Elbows down/in", "2–1–2–1", "60s"],
+    ["Reverse Grip Pulldown", "5", "15-8", "Underhand, squeeze low lats", "2–1–1–1", "75s"],
     ["Seated Cable Rows", "6", "20-8", "Sit tall, pull to the mid-torso with elbows back and a hard squeeze. Control the return to a full stretch—no momentum.", "2–1–1–1", "45s"],
     ["One Arm Rows", "5", "15-8", "Lean on a bench with one arm, pull at an angle towards your torso", "2-1-1-1", "45s"],
-    ["Straight Arm Pulldown", "6", "20-8", "Long stretch, brace ribs", "3–1–1–2", "60s"],
-    ["Single Arm Pulldown", "6", "15", "Elbow close to ribs", "3–1–1–1", "60s"],
+    ["Machine High Row", "6", "20-8", "Lead with elbows, squeeze shoulder blades together", "2–1–2–1", "45s"],
+    ["Single Arm Pulldown", "6", "15", "Elbow close to ribs", "3–1–1–1", "45s"],
     [
         Paragraph("<b><font color='red'>The Doom Lift</font></b>", body_style),
         "3", "6–10",
@@ -238,7 +237,7 @@ QUADS_CALVES = [
     ["Leg Extension Warm Up", "2", "20", "Light, controlled; full squeeze, 2-sec hold at top", "2-2-1-1", "45s"],
     ["Barbell Back Squat", "5", "15-8", "Sit deep, drive through heels, core tight, no bounce", "3-1-1-1", "90s"],
     ["Leg Press (Feet Low & Close-Stance)", "5", "15-8", "Drive through heels, no lockout, deep range", "3-1-1-1", "75s"],
-    ["Hack Squat", "6", "20-8", "Knees forward, back glued to the pad, sink deep without hip roll, drive up through mid-foot, and never fully lock out.", "3-1-1-1", "60s"],
+    ["Pendulum Squat", "5", "10", "Controlled descent, explosive ascent", "3-1-1-1", "90s"],
     ["Smith Machine Squat", "5", "15-8", "Angled Smith Machine", "3-1-1-1", "45s"],
     ["Leg Extensions", "6", "20-8", "Constant tension; last set drop to failure", "2-1-1-2", "60s"],
     ["Seated Calf Raise", "4", "20", "Full stretch → squeeze", "2–1–1–2", "45–60s"],
@@ -287,7 +286,7 @@ HAMSTRINGS_CALVES = [
 ARMS_ABS = [
     ["Tricep Pushdown (V/Rope), Change weekly", "6", "20-8", "Elbows locked, full ext", "2–1–1–2", "45s"],
     ["EZ Bar Overhead Tricep Extension", "6", "20-8", "Slow negative to forehead", "3–1–1–1", "60s"],
-    ["Single-Arm Tricep Ext", "6", "20-8", "Elbow tucked", "2–1–1–2", "45s"],
+    ["Single-Arm Tricep Ext", "5", "20, 15, 12, 12, 12", "Elbow tucked", "2–1–1–2", "45s"],
     ["Dip Machine", "5", "AMRAP", "Seated, squeeze at the bottom", "2–2–1–1", "45s"],
     ["EZ Bar Curl", "5", "AMRAP", "Strict elbows", "2–0–1–1", "45s"],
     ["Seated Machine Curl", "6", "AMRAP", "Slow eccentric, peak", "2–1–1–2", "45s"],
@@ -572,8 +571,8 @@ def run():
     story.append(PageBreak())
 
     # WORKOUT CHAPTERS (with one-liners)
-    story += workout_block("⚰️ CHEST + CALVES OF THE DAMNED", "The heart still beats… but not for long.", CHEST)
     story += workout_block("👁 BACK FROM THE ABYSS", "Pull your strength from the shadows.", BACK_ABS)
+    story += workout_block("⚰️ CHEST + CALVES OF THE DAMNED", "The heart still beats… but not for long.", CHEST)
     story.append(PageBreak())
     legs_colw = [175, 60, 60, 160, 70, 50]
     story += workout_block("🩸 QUADS - THE CHAINSAW WALK", "Every Step Burns. No pauses. No mercy", QUADS_CALVES,
